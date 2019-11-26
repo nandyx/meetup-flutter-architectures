@@ -1,13 +1,14 @@
-import 'package:architectures/vanilla/home_repository.dart';
 import 'package:flutter/material.dart';
 
-import 'vanilla/home_page.dart' as vanilla;
+// import 'first_version/home_page.dart' as firstVersion;
+import 'vanilla/vanilla.dart' as vanilla;
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  Widget _page = vanilla.HomePage(
-    repository: HomeRepository(),
+  // final Widget _page = firstVersion.HomePage();
+  final Widget _page = vanilla.HomePage(
+    repository: vanilla.HomeRepository(),
   );
 
   @override

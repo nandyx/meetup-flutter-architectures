@@ -1,6 +1,7 @@
-import 'package:architectures/core/contract/repository.dart';
 import 'package:flutter/material.dart';
-import '../core/model/movie.dart';
+
+import 'core/contract/repository.dart';
+import 'core/model/movie.dart';
 
 class HomePage extends StatefulWidget {
 

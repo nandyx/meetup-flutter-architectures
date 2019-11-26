@@ -1,9 +1,9 @@
 
 import 'dart:convert';
-import 'package:architectures/core/contract/repository.dart';
 import 'package:http/http.dart' as http;
 
-import '../core/model/movie.dart';
+import 'core/contract/repository.dart';
+import 'core/model/movie.dart';
 
 class HomeRepository implements Repository{
 
