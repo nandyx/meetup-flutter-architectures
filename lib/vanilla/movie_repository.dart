@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'core/contract/repository.dart';
 import 'core/model/movie.dart';
 
-class HomeRepository implements Repository{
+class MovieRepository implements Repository{
 
   Future<List<Movie>> fetchMovies() async {
     List<Movie> allMovies = List<Movie>();

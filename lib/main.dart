@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // import 'first_version/home_page.dart' as firstVersion;
 // import 'vanilla/vanilla.dart' as vanilla;
-// import 'scopemodel/scope_model.dart' as scopeModel;
+// import 'scopedmodel/scope_model.dart' as scopeModel;
 import 'bloc/bloc/bloc_provider.dart';
 import 'bloc/bloc.dart' as bloc;
 
@@ -12,7 +12,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   // final Widget _page = firstVersion.HomePage();
   // final Widget _page = vanilla.HomePage(
-  //   repository: vanilla.HomeRepository(),
+  //   repository: vanilla.MovieRepository(),
   // );
   // final Widget _page = scopeModel.HomePage(
   //   provider: scopeModel.MovieProvider(),
