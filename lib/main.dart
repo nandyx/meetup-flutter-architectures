@@ -1,35 +1,22 @@
-import 'package:architectures/bloc/bloc/movie_bloc.dart';
 import 'package:flutter/material.dart';
 
-// import 'first_version/home_page.dart' as firstVersion;
-// import 'vanilla/vanilla.dart' as vanilla;
-// import 'scopedmodel/scope_model.dart' as scopeModel;
-import 'bloc/bloc/bloc_provider.dart';
-import 'bloc/bloc.dart' as bloc;
+import 'vanilla/vanilla.dart' as vanilla;
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // final Widget _page = firstVersion.HomePage();
-  // final Widget _page = vanilla.HomePage(
-  //   repository: vanilla.MovieRepository(),
-  // );
-  // final Widget _page = scopeModel.HomePage(
-  //   provider: scopeModel.MovieProvider(),
-  // );
-  final Widget _page = bloc.HomePage();
+  final Widget _page = vanilla.HomePage(
+    repository: vanilla.MovieRepository(),
+  );
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      movieBloc: MovieBloc( provider: bloc.MovieProvider()),
-      child: MaterialApp(
-        title: 'Flutter Architectures',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: _page,
+    return MaterialApp(
+      title: 'Flutter Architectures',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: _page,
     );
   }
 }
