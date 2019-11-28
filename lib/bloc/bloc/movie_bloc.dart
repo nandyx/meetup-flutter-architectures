@@ -1,3 +1,4 @@
+import 'package:architectures/bloc/core/contracts/movie_bloc.dart';
 import 'package:architectures/bloc/core/state/movie_state.dart';
 
 import '../core/contracts.dart';
@@ -6,7 +7,7 @@ import 'package:rxdart/rxdart.dart';
 
 import '../core/viewmodels.dart' show Movie;
 
-class MovieBloc {
+class MovieBloc extends IMovieBloc {
   final IMovieProvider provider;
   final dataSubject = new BehaviorSubject<List<Movie>>();
   final loadSubject = new BehaviorSubject<bool>();
@@ -23,7 +24,7 @@ class MovieBloc {
             isLoading: l,
             movies: d,
           ));
-
+  @override
   void load() {
     loadSubject.sink.add(true);
     provider.fetchMovies().then((movies) {
@@ -32,6 +33,7 @@ class MovieBloc {
     });
   }
 
+  @override
   dispose() async {
     await dataSubject.drain();
     await loadSubject.drain();
